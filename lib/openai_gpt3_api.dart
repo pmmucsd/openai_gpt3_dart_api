@@ -283,7 +283,7 @@ class Engine {
   static const ada = Engine._('text-ada-001');
   static const babbage = Engine._('text-babbage-001');
   static const curie = Engine._('text-curie-001');
-  static const davinci = Engine._('gpt-4-32k');
+  static const davinci = Engine._('gpt-4');
 
   final String _string;
 
