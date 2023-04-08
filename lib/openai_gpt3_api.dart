@@ -85,7 +85,7 @@ class GPT3 {
         topP: topP);
 
     var reqData = data.toJson();
-    var response = await _postHttpCall(_getUri('completions', engine), reqData);
+    var response = await _postHttpCall(_getUri('chat/completions', engine), reqData);
     Map<String, dynamic> map = json.decode(response.body);
     _catchExceptions(map);
     return CompletionApiResult.fromJson(map);
@@ -283,7 +283,7 @@ class Engine {
   static const ada = Engine._('text-ada-001');
   static const babbage = Engine._('text-babbage-001');
   static const curie = Engine._('text-curie-001');
-  static const davinci = Engine._('gpt-3.5-turbo');
+  static const davinci = Engine._('text-davinci-003');
 
   final String _string;
 
